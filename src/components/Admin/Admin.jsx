@@ -5,11 +5,12 @@ import Sidebar from '../Sidebar/Sidebar';
 import AdminMain from '../AdminMain/AdminMain';
 import DashBoard from '../DashBoard';
 import './Admin.css';
+import Hierarchy from '../Hierarchy/Hierarchy';
 
 const Admin = () => {
   const [collapsed, setCollapsed] = useState(false);
 
-  
+
 
   return (
     <div className="admin-layout">
@@ -18,7 +19,7 @@ const Admin = () => {
         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
         <AdminMain collapsed={collapsed}>
           <Routes>
-            <Route path="/" element={<DashBoard />} />
+            <Route path="/hierarchy" element={<Hierarchy />} />
             {/* <Route path="/users" element={<Users />} /> */}
           </Routes>
         </AdminMain>
